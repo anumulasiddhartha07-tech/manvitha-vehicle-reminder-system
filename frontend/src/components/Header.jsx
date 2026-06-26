@@ -32,7 +32,7 @@ const Header = ({ user, notificationCount = 13, onLogout, setSidebarOpen }) => {
       try {
         const token = localStorage.getItem('token');
         if (!token) return;
-        const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts?limit=5', {
+        const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts?limit=5', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {

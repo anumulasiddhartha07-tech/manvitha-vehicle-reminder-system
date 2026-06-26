@@ -384,7 +384,7 @@ const Vehicles = () => {
       const token = localStorage.getItem('token');
       if (!token) return;
 
-      const url = new URL('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles');
+      const url = new URL('https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles');
       url.searchParams.append('page', page);
       url.searchParams.append('limit', 8);
       if (search) url.searchParams.append('search', search);
@@ -450,7 +450,7 @@ const Vehicles = () => {
   const executeDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles/${selectedVehicleId}`, {
+      const res = await fetch(`https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles/${selectedVehicleId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

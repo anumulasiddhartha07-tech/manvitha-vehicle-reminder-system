@@ -66,7 +66,7 @@ const Login = ({ onLoginSuccess }) => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/login-password', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/login-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -110,7 +110,7 @@ const Login = ({ onLoginSuccess }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/register', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -156,7 +156,7 @@ const Login = ({ onLoginSuccess }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/verify-email', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/verify-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -188,7 +188,7 @@ const Login = ({ onLoginSuccess }) => {
     setSuccess('');
     setLoading(true);
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/resend-otp', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/resend-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: targetEmail })
@@ -219,7 +219,7 @@ const Login = ({ onLoginSuccess }) => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/forgot-password', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: targetEmail })
@@ -255,7 +255,7 @@ const Login = ({ onLoginSuccess }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/reset-password', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

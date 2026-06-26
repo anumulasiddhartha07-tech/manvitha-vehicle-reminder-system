@@ -50,7 +50,7 @@ const Alerts = () => {
       if (!token) return;
 
       // 1. Fetch Stats
-      const statsRes = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/stats', {
+      const statsRes = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/stats', {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (statsRes.ok) {
@@ -59,7 +59,7 @@ const Alerts = () => {
       }
 
       // 2. Fetch Alerts List
-      const alertsUrl = new URL('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts');
+      const alertsUrl = new URL('https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts');
       alertsUrl.searchParams.append('page', page);
       alertsUrl.searchParams.append('limit', 6);
       if (search) alertsUrl.searchParams.append('search', search);
@@ -94,7 +94,7 @@ const Alerts = () => {
   const handleMarkAsRead = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/${id}/read`, {
+      const res = await fetch(`https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/${id}/read`, {
         method: 'PUT',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -109,7 +109,7 @@ const Alerts = () => {
   const handleMarkAllRead = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/read-all', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/read-all', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` }
       });

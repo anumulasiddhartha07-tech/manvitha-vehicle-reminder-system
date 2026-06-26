@@ -1,4 +1,4 @@
-const BASE_URL = 'http://https://manvitha-vehicle-reminder-system-1.onrender.com/api';
+const BASE_URL = 'https://manvitha-vehicle-reminder-system-1.onrender.com/api';
 
 async function login(email, password) {
   const res = await fetch(`${BASE_URL}/auth/login-password`, {

@@ -62,7 +62,7 @@ const Documents = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents`, {
+      const res = await fetch(`https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -101,7 +101,7 @@ const Documents = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents/${replaceDocId}/replace`, {
+      const res = await fetch(`https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents/${replaceDocId}/replace`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ const Documents = () => {
     if (!docToDelete) return;
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents/${docToDelete.id}?document_type=${docToDelete.document_type}`, {
+      const res = await fetch(`https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents/${docToDelete.id}?document_type=${docToDelete.document_type}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

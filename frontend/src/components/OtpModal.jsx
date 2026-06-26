@@ -13,7 +13,7 @@ const OtpModal = ({ isOpen, email, onVerifySuccess, onClose }) => {
     setError('');
     setLoading(true);
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/send-otp', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/send-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
@@ -108,7 +108,7 @@ const OtpModal = ({ isOpen, email, onVerifySuccess, onClose }) => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/verify-otp', {
+      const res = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/auth/verify-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp })

@@ -47,12 +47,12 @@ const Dashboard = () => {
         if (!token) return;
 
         // Fetch stats
-        const statsRes = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/stats', {
+        const statsRes = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/stats', {
           headers: { Authorization: `Bearer ${token}` }
         });
         
         // Fetch vehicles list to get counts and top expiring docs
-        const vehiclesRes = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles?limit=100', {
+        const vehiclesRes = await fetch('https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles?limit=100', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
