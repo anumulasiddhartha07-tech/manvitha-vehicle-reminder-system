@@ -79,7 +79,7 @@ const VehicleDetails = () => {
   const fetchVehicleDetails = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/vehicles/${id}`, {
+      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -108,7 +108,7 @@ const VehicleDetails = () => {
   const executeDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/vehicles/${id}`, {
+      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -143,7 +143,7 @@ const VehicleDetails = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/documents/${vehicle.id}/replace`, {
+      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/documents/${vehicle.id}/replace`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -176,7 +176,7 @@ const VehicleDetails = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/alerts/${resolvingAlertId}/resolve`, {
+      const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/${resolvingAlertId}/resolve`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

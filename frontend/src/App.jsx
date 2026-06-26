@@ -53,7 +53,7 @@ const App = () => {
     const fetchCounts = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch('http://localhost:5000/api/alerts/stats', {
+        const res = await fetch('http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/alerts/stats', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {

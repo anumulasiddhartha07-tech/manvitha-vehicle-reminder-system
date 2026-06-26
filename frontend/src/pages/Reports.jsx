@@ -34,7 +34,7 @@ const Reports = () => {
       const token = localStorage.getItem('token');
       if (!token) return;
 
-      const url = `http://localhost:5000/api/vehicles?limit=1000`; // Fetch all vehicles
+      const url = `http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles?limit=1000`; // Fetch all vehicles
       const res = await fetch(url, {
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -123,7 +123,7 @@ const Reports = () => {
         if (startDate) queryParams.append('startDate', startDate);
         if (endDate) queryParams.append('endDate', endDate);
 
-        const url = `http://localhost:5000/api/reports/export?${queryParams.toString()}`;
+        const url = `http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/reports/export?${queryParams.toString()}`;
         const res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` }
         });

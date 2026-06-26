@@ -74,7 +74,7 @@ const AddVehicle = () => {
     const checkDuplicate = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch(`http://localhost:5000/api/vehicles?search=${vehicleNumber}`, {
+        const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles?search=${vehicleNumber}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {
@@ -107,7 +107,7 @@ const AddVehicle = () => {
     const fetchVehicleData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch(`http://localhost:5000/api/vehicles/${id}`, {
+        const res = await fetch(`http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {
@@ -222,8 +222,8 @@ const AddVehicle = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode 
-        ? `http://localhost:5000/api/vehicles/${id}`
-        : 'http://localhost:5000/api/vehicles';
+        ? `http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles/${id}`
+        : 'http://https://manvitha-vehicle-reminder-system-1.onrender.com/api/vehicles';
       
       const method = isEditMode ? 'PUT' : 'POST';
 
